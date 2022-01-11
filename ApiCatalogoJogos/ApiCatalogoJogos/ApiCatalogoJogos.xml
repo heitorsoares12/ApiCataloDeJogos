@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiCatalogoJogos</name>
+    </assembly>
+    <members>
+        <member name="M:ApiCatalogoJogos.Controllers.V1.JogosController.Obter(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos os jogos de forma paginada
+            </summary>
+            <remarks>
+            Nao e possivel retornar os jogos sem paginacao
+            </remarks>
+            <param name="pagina">Indica qual pagina esta sendo consultada. Minimo 1</param>
+            <param name="quantidade">Indica a quantidade de registros por pagina. Minmo 1 e maximo 50</param>
+            <response code="200">Retorna a losta de jogos</response>
+            <response code="204">Caso nao haja jogos</response>
+        </member>
+        <member name="M:ApiCatalogoJogos.Controllers.V1.JogosController.Obter(System.Guid)">
+            <summary>
+            Buscar um jogo pelo seu Id
+            </summary>
+            <param name="idJogo">Id do jogo buscado</param>
+            <response code="200">Retorna jogo filtrado</response>
+            <response code="204">Caso nao haja jogo com este Id</response>
+        </member>
+    </members>
+</doc>
